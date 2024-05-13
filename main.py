@@ -1,5 +1,6 @@
 # main.py
 
+import json
 from supply_chain import SupplyChainGraph, Node
 from blockchain_interaction import BlockchainInteraction
 
@@ -24,4 +25,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
