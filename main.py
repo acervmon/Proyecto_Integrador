@@ -13,7 +13,7 @@ def main():
     nodes = [Node("Nodo1"), Node("Nodo2"), Node("Nodo3")]
 
     # Agregar y transmitir datos
-    nodes[0].add_data("Componente A1")
+    nodes[0].add_data("Componente A1", nodes)
 
     # Interactuar con la blockchain
     contract_address = "0xYourContractAddress"
@@ -24,3 +24,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

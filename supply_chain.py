@@ -24,12 +24,12 @@ class Node:
         self.name = name
         self.data = []
 
-    def add_data(self, data):
+    def add_data(self, data, nodes):
         print(f"{self.name} agregando datos: {data}")
         self.data.append(data)
-        self.broadcast_data(data)
+        self.broadcast_data(data, nodes)
 
-    def broadcast_data(self, data):
+    def broadcast_data(self, data, nodes):
         # En un entorno real, aquí se aplicarían mecanismos de validación antes de aceptar los datos
         print(f"{self.name} transmite datos: {data}")
         for node in nodes:
@@ -39,3 +39,4 @@ class Node:
     def receive_data(self, data):
         print(f"{self.name} recibió datos: {data}")
         self.data.append(data)
+
