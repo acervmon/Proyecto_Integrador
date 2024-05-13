@@ -4,6 +4,7 @@ import json
 from supply_chain import SupplyChainGraph, Node
 from blockchain_interaction import BlockchainInteraction
 
+
 def main():
     # Crear y dibujar el gráfico de la cadena de suministro
     supply_chain_graph = SupplyChainGraph()
@@ -17,8 +18,9 @@ def main():
     nodes[0].add_data("Componente A1", nodes)
 
     # Interactuar con la blockchain
+    with open('contract_abi.json', 'r') as f:
+        contract_abi = json.load(f)
     contract_address = "0xYourContractAddress"
-    contract_abi = json.loads('YourContractABI')
     blockchain_interaction = BlockchainInteraction(contract_address, contract_abi)
     component_id = "C1234"
     blockchain_interaction.verify_component(component_id)
