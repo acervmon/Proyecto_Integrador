@@ -1,5 +1,4 @@
-# supply_chain.py
-
+# supply_chain
 import networkx as nx
 import matplotlib.pyplot as plt
 
@@ -8,7 +7,7 @@ class SupplyChainGraph:
         self.G = nx.DiGraph()
         self.nodes = ["Proveedor", "Fabricante", "Distribuidor", "Minorista", "Consumidor"]
         self.edges = [("Proveedor", "Fabricante"), ("Fabricante", "Distribuidor"),
-                      ("Distribuidor", "Minorista"), ("Minorista", "Consumidor")]
+        ("Distribuidor", "Minorista"), ("Minorista", "Consumidor")]
 
     def create_graph(self):
         self.G.add_nodes_from(self.nodes)

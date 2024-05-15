@@ -10,7 +10,7 @@ G.add_nodes_from(nodes)
 
 # Conectar los nodos para mostrar el flujo de la cadena de suministro
 edges = [("Proveedor", "Fabricante"), ("Fabricante", "Distribuidor"),
-         ("Distribuidor", "Minorista"), ("Minorista", "Consumidor")]
+    ("Distribuidor", "Minorista"), ("Minorista", "Consumidor")]
 G.add_edges_from(edges)
 
 # Dibujar el grafo
